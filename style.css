@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    display: grid;
+    grid-template-rows: 90px 1fr;
+}
+
+
+section{
+    display: flex;
+}
+
+#menu{
+    background-color: #0f0f0f;
+    position: relative;
+    svg{
+        fill: white;
+        height: 30px;
+        width: 30px;
+        margin-top: 25px;
+        margin-left: 30px;
+       
+    }
+}
+
+#menu-click{
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+    opacity: 10;
+    z-index: 201;
+    width: 30px;
+    height: 30px;
+}
+
+#menu-click:checked{
+    z-index: 200;
+}
+
+#menu-click:checked+aside {
+     left: 0;
+    }
+
+aside{ 
+    position: fixed;
+    height: 100vh;
+    width: 305px;
+    background-color: white;
+    top: 0;
+    left: -305px;
+    padding: 140px 60px 10px 59px;
+    font-family:  "Montserrat", sans-serif;
+    z-index: 199;
+    transition: 0.4s;
+}
+
+#barra-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+#arrow-left{
+    background-color: black;
+    width: 100px;
+    svg{
+        fill: white;
+        height: 35px;
+        width: 35px;
+    }
+}
+
+#tulen{
+    background-color: blue;
+    width: 205px;
+}
+
+#tulen h1{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+}
+#espaco-branco{
+    width: 305px;
+    height: 100px;
+}
+
+#side-menu li {
+    list-style: none;
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+#side-menu li a:hover{
+    text-decoration: none;
+    color: blue;
+    transition: 0.5s;
+}
+#home{
+    text-decoration: none;
+    color: blue;
+}
+#about{
+    text-decoration: none;
+    color: lightgray;
+}
+#gallery{
+    text-decoration: none;
+    color: lightgray;
+}
+#blog{
+    text-decoration: none;
+    color: lightgray;
+}
+#contact{
+    text-decoration: none;
+    color: lightgray;
+}
+
+
+#side-menu div{
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    svg{
+        fill: lightgray;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+#side-menu h2 {
+    position: relative;
+    right: 50px;
+    font-size: 15px;
+    width: 250px;
+    height: 80px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding: 1px;
+    color: lightgray;
+    svg{
+        width: 15px;
+        height: 15px;
+        fill: red;
+        margin: 0;
+    }
+} 
+
+
+#social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    svg{
+        margin-bottom: 50px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+#galeria { 
+    display: flex;
+    width: 100%;}
+
+#tuatara{
+    background-image: url(imagens/5.jpg.webp );
+    flex-grow: 5.5;
+    background-color: transparent;
+}
+#mulher{
+    background-image: url(imagens/1.jpg.webp);
+}
+#cachorro{
+    background-image: url(imagens/2.jpg.webp);
+}
+#mar{
+    background-image: url(imagens/3.jpg.webp);
+}
+#carro{
+    background-image: url(imagens/4.jpg.webp);
+}
+
+.item-galeria{
+    transition: 0.5s;
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode:multiply;
+    color: white;
+    position: relative;
+}
+.item-galeria:hover{
+    flex-grow: 5.5;
+    background-color: transparent;
+}
+
+#galeria:hover #tuatara{
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#galeria:hover #tuatara:hover{
+    flex-grow: 5.5;
+    background-color: transparent;
+}
+
+#filtro{
+    height: 100%;
+    background-image: linear-gradient(to bottom,transparent 70%,rgba(0,0,0,08));
+}
+
+.texto{
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 50px 40px;
+    opacity: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size:30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#author{
+    display: flex;
+    align-items: center;
+    h4{
+        margin-left: 10px;
+    }
+    img{
+        border-radius: 50%;
+    }
+}
+
+.item-galeria:hover .texto{
+    opacity: 1;
+} 
+
+#galeria #tuatara .texto{
+    opacity: 1;
+}
+
+#galeria:hover #tuatara .texto{
+    opacity: 0;
+}
+#galeria:hover #tuatara:hover .texto{
+    opacity: 1;
+}
+
+
+
+
